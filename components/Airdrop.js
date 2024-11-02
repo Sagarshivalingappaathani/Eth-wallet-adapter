@@ -11,7 +11,7 @@ export default function Airdrop() {
 
   const handleAirdrop = async () => {
     if (!address) {
-      toast.error("Please connect your wallet."); // Notify if no address
+      toast.error("Please connect your wallet."); 
       return;
     }
 

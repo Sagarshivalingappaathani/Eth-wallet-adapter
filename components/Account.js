@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useAccount, useDisconnect, useEnsName, useEnsAvatar, useBalance } from "wagmi";
+import { useAccount, useDisconnect, useBalance } from "wagmi";
 import { formatUnits } from "ethers"; 
 
 export default function Account() {
@@ -14,7 +14,11 @@ export default function Account() {
         {address}
       </div>
       <div className="text-lg font-semibold mb-2">
-        Balance: {balanceData ? `${formatUnits(balanceData.value, balanceData.decimals)} ${balanceData.symbol}` : "Loading..."}
+        Address: {address}, Balance: {balanceData ? `${formatUnits(balanceData.value, balanceData.decimals)} ${balanceData.symbol}` : "Loading..."}
+      </div>
+      {/* Message indicating the supported network */}
+      <div className="text-red-500 font-medium mb-2">
+        Note: This feature works only for the Sepolia network.
       </div>
       <button
         onClick={() => disconnect()}
