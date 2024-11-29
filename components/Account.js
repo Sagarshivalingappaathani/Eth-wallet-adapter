@@ -18,7 +18,7 @@ export default function Account() {
       </div>
       {/* Message indicating the supported network */}
       <div className="text-red-500 font-medium mb-2">
-        Note: This feature works only for the Sepolia network.
+        Note: This features works only for the Sepolia network.
       </div>
       <button
         onClick={() => disconnect()}
